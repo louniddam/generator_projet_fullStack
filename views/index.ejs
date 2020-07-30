@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Groups Generator</h1>
+        <div class="sub_head">
+            <nav>
+                <a href="#">Students</a>
+                <a href="http://localhost:8080/groups">Groups</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section__student">
+        <ul>
+            <% for (var i = 0; i < stud_names.length; i++) { %>
+                <li> <%= stud_names[i] %> </li>
+            <% } %>
+        </ul>
+    </section>
+
+    <section class="section__form">
+        <form action="/students" method="post" id="first_form">
+            <input type="text" placeholder="Enter a new student" class="form-control" id="input" name="name">
+            <button class="btn" id="add_student" type="submit">Add</button>
+        </form>
+    </section>
+
+    <script src="/app.js"></script>
+</body>
+</html>
